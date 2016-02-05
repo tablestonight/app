@@ -5,15 +5,20 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
-  <!-- Dashboard Tab -->
-  <ion-tab hidden="{{ hiding }}" title="Home" icon-off="ion-android-bar" icon-on="ion-android-bar" href="#/tab/dash">
+  <ion-tab hidden="{{ hiding }}"
+    title="Home"
+    icon-off="ion-android-bar"
+    icon-on="ion-android-bar"
+    href="#/tab/home">
     <ion-nav-view name="tab-home"></ion-nav-view>
   </ion-tab>
 
-  <!-- Chats Tab -->
-  <ion-tab hidden="{{ hiding }}" title="Hosts" icon-off="ion-person-stalker" icon-on="ion-person-stalker" href="#/tab/hosts">
-    <ion-nav-view name="tab-hosts"></ion-nav-view>
+  <ion-tab hidden="{{ hiding }}"
+    title="Locations"
+    icon-off="ion-person"
+    icon-on="ion-person"
+    href="#/tab/locations">
+    <ion-nav-view name="tab-locations"></ion-nav-view>
   </ion-tab>
-
 
 </ion-tabs>
