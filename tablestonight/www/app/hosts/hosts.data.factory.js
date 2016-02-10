@@ -7,27 +7,27 @@
 		var chats = [{
 	    id: 0,
 	    name: 'Ben Sparrow',
-	    lastText: 'You on your way?',
+	    phoneNumber: '(111) 111-1111',
 	    face: 'img/ben.png'
 	  }, {
 	    id: 1,
 	    name: 'Max Lynx',
-	    lastText: 'Hey, it\'s me',
+	    phoneNumber: '(222) 222-2222',
 	    face: 'img/max.png'
 	  }, {
 	    id: 2,
 	    name: 'Adam Bradleyson',
-	    lastText: 'I should buy a boat',
+	    phoneNumber: '(333) 333-3333',
 	    face: 'img/adam.jpg'
 	  }, {
 	    id: 3,
 	    name: 'Perry Governor',
-	    lastText: 'Look at my mukluks!',
+	    phoneNumber: '(444) 444-4444',
 	    face: 'img/perry.png'
 	  }, {
 	    id: 4,
 	    name: 'Mike Harrington',
-	    lastText: 'This is wicked good ice cream.',
+	    phoneNumber: '(555) 555-5555',
 	    face: 'img/mike.png'
 	  }];
 

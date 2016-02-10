@@ -1,9 +1,17 @@
 <ion-view view-title="{{host.name}}">
+  <ion-nav-title hidden='true'>
+  </ion-nav-title>
   <ion-content class="padding">
-    <img ng-src="{{host.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{host.lastText}}
-      bawls
-    </p>
+    <div class="center">
+      <h3>
+        {{host.name}}
+      </h3>
+      <img ng-src="{{host.face}}" style="width: 64px; height: 64px">
+      <h4>
+        Contact Information
+      </h4>
+      <p>
+        {{host.phoneNumber}}
+      </p>
   </ion-content>
 </ion-view>

@@ -4,8 +4,7 @@
 		.controller('HostsCtrl', HostsCtrl);
 
 	function HostsCtrl($scope, HostsService) {
-		$scope.chats = HostsService.all();
-		console.log($scope.chats);
+		$scope.hosts = HostsService.all();
 	  $scope.$on("$ionicView.enter", function() {
 	    $scope.$emit('show');
 	  });

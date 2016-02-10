@@ -18,9 +18,21 @@
 	      id: 2
 	    },
 	    {
-	      name: 'King James',
+	      name: 'Omnia',
 	      id: 3
-	    }
+	    },
+			{
+				name: 'Drais',
+				id: 4
+			},
+			{
+				name: 'Light',
+				id: 5
+			},
+			{
+				name: 'Marquee',
+				id: 6
+			}
 	  ];
 
 	  var svc = {};
