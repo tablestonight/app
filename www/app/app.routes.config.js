@@ -29,14 +29,14 @@
 	    templateUrl: 'app/menu-tabs/tabs.html'
 	  })
 	  // Each tab has its own nav history stack:
-	  .state('tab.home', {
+	  .state('home', {
 	    url: '/home',
-	    views: {
-	      'home': {
-	        templateUrl: 'app/home/home.html',
-	        controller: 'HomeCtrl'
-	      }
-	    }
+			templateUrl: 'app/home/home.html',
+			controller: 'HomeCtrl'
+	    // views: {
+	    //   'home': {
+	    //   }
+	    // }
 	  })
 	  .state('tab.locations', {
 	    url: '/locations',
@@ -65,6 +65,6 @@
 	      }
 	    }
 	  });
-	  $urlRouterProvider.otherwise('/tab/home');
+	  $urlRouterProvider.otherwise('/home');
 	}
 })();
