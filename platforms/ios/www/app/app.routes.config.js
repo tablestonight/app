@@ -41,7 +41,7 @@
 	  .state('tab.locations', {
 	    url: '/locations',
 	    views: {
-	      'locations': {
+	      'home': {
 	        templateUrl: 'app/locations/locations.html',
 	        controller: 'LocationsCtrl'
 	      }

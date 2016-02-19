@@ -3,10 +3,14 @@
 		.module('tablesTonight.home.controller', [])
 		.controller('HomeCtrl', HomeCtrl);
 
-	function HomeCtrl($scope, $ionicModal) {
+	function HomeCtrl($scope, $ionicModal, $state) {
 	  $scope.$on("$ionicView.enter", function() {
 	    $scope.$emit('show');
 	  });
+
+		$scope.navigate = function() {
+			// $state.go('tab.locations');
+		}
 
 		$ionicModal.fromTemplateUrl('app/home/my-modal.html', {
 	    scope: $scope,
