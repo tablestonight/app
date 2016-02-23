@@ -16,8 +16,6 @@
   	      Submit
   	    </button>
       </div>
-      <div ng-if="updateInformation">
-        here
-      </div>
+      <update-information-steps ng-if="updateInformation" step="updateInformation" close="closeModal"></update-information-steps>
     </ion-content>
   </ion-modal-view>

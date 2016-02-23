@@ -1,5 +1,6 @@
 angular
 	.module('tablesTonight.home', [
 		'tablesTonight.home.controller',
-		'home.host'
+		'app.home.host',
+		'app.home.update-information'
 	]);

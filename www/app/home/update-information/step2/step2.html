@@ -1,0 +1,33 @@
+<div>
+	<p>
+		Let's set up your account.
+	</p>
+	<label class="item item-input">
+		<span class="input-label">Nickname</span>
+		<input type="text" ng-model="host.nickName">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Day Club</span>
+		<select ng-options="dayclub for dayclub in dayClubList"
+			ng-model="user.dayClub">
+		</select>
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Facebook</span>
+		/<input type="text" ng-model="host.socialMedia.facebook">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Instagram</span>
+		@<input type="text" ng-model="host.socialMedia.instagram">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Twitter</span>
+		@<input type="text" ng-model="host.socialMedia.twitter">
+	</label>
+	<button ng-click="finish()" class="button button-block button-stable">
+		Skip
+	</button>
+	<button ng-click="finish()" class="button button-block button-stable">
+		Save
+	</button>
+</div>

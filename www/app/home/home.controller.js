@@ -11,18 +11,15 @@
 		$scope.navigate          = navigate;
 		$scope.openModal         = openModal;
 		$scope.closeModal        = closeModal;
-
 		init();
 
 		///////////////////////////////////////////////////////////////////////////
 
 		function login() {
-			console.log($scope.credentials);
 			HostService.login($scope.credentials)
 				.then(function(host) {
-					console.log(host);
 					if (!host.error) {
-						$scope.updateInformation = true;
+						$scope.updateInformation = 'step1';
 					}
 				});
 			// closeModal();
@@ -33,11 +30,14 @@
 		}
 
 		function openModal() {
-	    $scope.modal.show();
+			$scope.modal.show();
 	  }
 
 		function closeModal() {
-	    $scope.modal.hide();
+			$scope.updateInformation = 'step1';
+	    $scope.modal.remove();
+			delete $scope.modal;
+			init();
 	  }
 
 		function init() {

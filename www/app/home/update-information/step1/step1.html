@@ -1,0 +1,43 @@
+<div>
+	<p>
+		Update your account information.
+	</p>
+	<label class="item item-input">
+		<span class="input-label">First Name</span>
+		<input type="text" ng-model="host.firstName">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Last Name</span>
+		<input type="text" ng-model="host.lastName">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Phone Number</span>
+		<input type="tel" ng-model="host.mobile">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">E-mail</span>
+		<input type="email" ng-model="host.email">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">New Password</span>
+		<input type="password" ng-model="host.newPassword">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Night Club</span>
+		<select ng-options="nightclub for nightclub in nightClubList"
+			ng-model="user.nightClub">
+		</select>
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Searchable</span>
+		<label class="toggle">
+		   <input type="checkbox">
+		   <div class="track">
+		     <div class="handle"></div>
+		   </div>
+		</label>
+	</label>
+	<button ng-click="next()" class="button button-block button-stable">
+		Next
+	</button>
+</div>
