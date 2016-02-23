@@ -3,38 +3,66 @@
 		.module('tablesTonight.home.controller', [])
 		.controller('HomeCtrl', HomeCtrl);
 
-	function HomeCtrl($scope, $ionicModal, $state) {
-	  $scope.$on("$ionicView.enter", function() {
-	    $scope.$emit('show');
-	  });
+	function HomeCtrl($scope, $ionicModal, $state, HostService) {
 
-		$scope.navigate = function() {
-			// $state.go('tab.locations');
+		$scope.credentials       = {};
+		$scope.updateInformation = false;
+		$scope.login             = login;
+		$scope.navigate          = navigate;
+		$scope.openModal         = openModal;
+		$scope.closeModal        = closeModal;
+
+		init();
+
+		///////////////////////////////////////////////////////////////////////////
+
+		function login() {
+			console.log($scope.credentials);
+			HostService.login($scope.credentials)
+				.then(function(host) {
+					console.log(host);
+					if (!host.error) {
+						$scope.updateInformation = true;
+					}
+				});
+			// closeModal();
 		}
 
-		$ionicModal.fromTemplateUrl('app/home/my-modal.html', {
-	    scope: $scope,
-	    animation: 'slide-in-up'
-	  }).then(function(modal) {
-	    $scope.modal = modal;
-	  });
-	  $scope.openModal = function() {
+		function navigate() {
+			$state.go('tab.locations');
+		}
+
+		function openModal() {
 	    $scope.modal.show();
-	  };
-	  $scope.closeModal = function() {
+	  }
+
+		function closeModal() {
 	    $scope.modal.hide();
-	  };
-	  //Cleanup the modal when we're done with it!
-	  $scope.$on('$destroy', function() {
-	    $scope.modal.remove();
-	  });
-	  // Execute action on hide modal
-	  $scope.$on('modal.hidden', function() {
-	    // Execute action
-	  });
-	  // Execute action on remove modal
-	  $scope.$on('modal.removed', function() {
-	    // Execute action
-	  });
+	  }
+
+		function init() {
+			$ionicModal.fromTemplateUrl('app/home/my-modal.html', {
+		    scope: $scope,
+		    animation: 'slide-in-up'
+		  }).then(function(modal) {
+		    $scope.modal = modal;
+		  });
+
+			configureListeners();
+
+			function configureListeners() {
+				$scope.$on('$destroy', function() {
+			    $scope.modal.remove();
+			  });
+			  // Execute action on hide modal
+			  $scope.$on('modal.hidden', function() {
+			    // Execute action
+			  });
+			  // Execute action on remove modal
+			  $scope.$on('modal.removed', function() {
+			    // Execute action
+			  });
+			}
+		}
 	}
 })();

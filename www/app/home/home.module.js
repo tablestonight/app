@@ -1,4 +1,5 @@
 angular
 	.module('tablesTonight.home', [
-		'tablesTonight.home.controller'
+		'tablesTonight.home.controller',
+		'home.host'
 	]);
