@@ -33,37 +33,21 @@
 	    url: '/home',
 			templateUrl: 'app/home/home.html',
 			controller: 'HomeCtrl'
-	    // views: {
-	    //   'home': {
-	    //   }
-	    // }
 	  })
-	  .state('tab.locations', {
+	  .state('locations', {
 	    url: '/locations',
-	    views: {
-	      'locations': {
-	        templateUrl: 'app/locations/locations.html',
-	        controller: 'LocationsCtrl'
-	      }
-	    }
+			templateUrl: 'app/locations/locations.html',
+			controller: 'LocationsCtrl'
 	  })
-	  .state('tab.hosts', {
+	  .state('hosts', {
 	    url: '/hosts',
-	    views: {
-	      'locations': {
-	        templateUrl: 'app/hosts/hosts.html',
-	        controller: 'HostsCtrl'
-	      }
-	    }
+			templateUrl: 'app/hosts/hosts.html',
+			controller: 'HostsCtrl'
 	  })
-	  .state('tab.host-detail', {
+	  .state('host-detail', {
 	    url: '/host/:hostId',
-	    views: {
-	      'locations': {
-	        templateUrl: 'app/host-detail/host-detail.html',
-	        controller: 'HostDetailCtrl'
-	      }
-	    }
+			templateUrl: 'app/host-detail/host-detail.html',
+			controller: 'HostDetailCtrl'
 	  });
 	  $urlRouterProvider.otherwise('/home');
 	}

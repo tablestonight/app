@@ -5,5 +5,6 @@ angular
 		'tablesTonight.home',
 		'tablesTonight.locations',
 		'tablesTonight.hosts',
-		'tablesTonight.host-detail'
+		'tablesTonight.host-detail',
+		'app.data'
 	]);

@@ -3,7 +3,7 @@
 		.module('tablesTonight.home.controller', [])
 		.controller('HomeCtrl', HomeCtrl);
 
-	function HomeCtrl($scope, $ionicModal, $state, HostService) {
+	function HomeCtrl($scope, $ionicModal, $state, HostService, TablesTonightService) {
 
 		$scope.credentials       = {};
 		$scope.updateInformation = false;
@@ -25,8 +25,9 @@
 			// closeModal();
 		}
 
-		function navigate() {
-			$state.go('tab.locations');
+		function navigate(location) {
+			TablesTonightService.saveLocation(location);
+			$state.go('locations');
 		}
 
 		function openModal() {
@@ -34,7 +35,9 @@
 	  }
 
 		function closeModal() {
-			$scope.updateInformation = 'step1';
+			if (HostService.getHostInfo()) {
+				$scope.updateInformation = 'step1';
+			}
 	    $scope.modal.remove();
 			delete $scope.modal;
 			init();
