@@ -3,17 +3,33 @@
 		.module('app.data', [])
 		.factory('TablesTonightService', TablesTonightService);
 
-	function TablesTonightService() {
+	function TablesTonightService($http) {
 
 		var svc = {};
 		var location = null;
+		var url = 'http://tablesTonight.herokuapp.com/';
 
 		svc.currentLocation = currentLocation;
 		svc.saveLocation = saveLocation;
 		svc.dayClubList   = dayClubList();
 		svc.nightClubList = nightClubList();
+		svc.getUrl = getUrl;
+		init();
 
 		return svc;
+
+		function init() {
+			$http.get('http://localhost:1337/origin')
+				.then(function(response) {
+					if (response.data) {
+						url = response.data;
+					}
+				});
+		}
+
+		function getUrl() {
+			return url;
+		}
 
 		function currentLocation() {
 			return location;

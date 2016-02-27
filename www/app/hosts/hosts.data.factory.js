@@ -3,7 +3,7 @@
 		.module('tablesTonight.hosts.data', [])
 		.factory('HostsService', HostsService);
 
-	function HostsService($http) {
+	function HostsService($http, TablesTonightService) {
 		var svc = {};
 		svc.getNightClubHosts = getNightClubHosts;
 		svc.getDayClubHosts   = getDayClubHosts;
@@ -12,14 +12,14 @@
 		return svc;
 
 		function getNightClubHosts(nightclub) {
-			return $http.get('http://localhost:1337/nightclub/'+nightclub)
+			return $http.get(TablesTonightService.getUrl() + 'nightclub/' + nightclub)
 				.then(function(response) {
 					return response.data;
 				});
 		}
 
 		function getDayClubHosts(dayclub) {
-			return $http.get('http://localhost:1337/dayclub/'+dayclub)
+			return $http.get(TablesTonightService.getUrl() + 'dayclub/' + dayclub)
 				.then(function(response) {
 					return response.data;
 				});
