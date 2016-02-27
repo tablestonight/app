@@ -1,6 +1,6 @@
 (function() {
 	angular
-		.module('tablesTonight.routes', ['ionic'])
+		.module('tablesTonight.routes', ['ionic', 'ngCordova'])
 		.run(ionicConfig)
 		.config(routeConfig);
 
@@ -22,12 +22,6 @@
 
 	function routeConfig($stateProvider, $urlRouterProvider) {
 	  $stateProvider
-	    .state('tab', {
-	    url: '/tab',
-	    abstract: true,
-	    controller: 'MenuTabsCtrl',
-	    templateUrl: 'app/menu-tabs/tabs.html'
-	  })
 	  // Each tab has its own nav history stack:
 	  .state('home', {
 	    url: '/home',
@@ -40,12 +34,12 @@
 			controller: 'LocationsCtrl'
 	  })
 	  .state('hosts', {
-	    url: '/hosts',
+	    url: '/:type/:name',
 			templateUrl: 'app/hosts/hosts.html',
 			controller: 'HostsCtrl'
 	  })
 	  .state('host-detail', {
-	    url: '/host/:hostId',
+	    url: '/host',
 			templateUrl: 'app/host-detail/host-detail.html',
 			controller: 'HostDetailCtrl'
 	  });

@@ -3,10 +3,27 @@
 		.module('tablesTonight.hosts.controller', [])
 		.controller('HostsCtrl', HostsCtrl);
 
-	function HostsCtrl($scope, HostsService) {
-		$scope.hosts = HostsService.all();
-	  $scope.$on("$ionicView.enter", function() {
-	    $scope.$emit('show');
+	function HostsCtrl($scope, $stateParams, HostsService) {
+	  $scope.$on("$ionicView.beforeEnter", function(HostDetailCtrl) {
+			var name = $stateParams.name;
+			var type = $stateParams.type;
+			getHosts(name)
+				.then(function(hosts) {
+					$scope.hosts = hosts;
+				});
 	  });
+
+		$scope.saveHost = saveHost;
+
+		function saveHost(index) {
+			HostsService.saveHost($scope.hosts[index]);
+		}
+
+		function getHosts(club) {
+			if ($stateParams.type === 'day') {
+				return HostsService.getDayClubHosts(club);
+			}
+			return HostsService.getNightClubHosts(club);
+		}
 	}
 })();

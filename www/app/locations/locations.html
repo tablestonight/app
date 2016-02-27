@@ -2,7 +2,7 @@
   <ion-nav-title>{{ title }}</ion-nav-title>
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="location in locations" type="item-text-wrap" href="#/hosts">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="location in locations" type="item-text-wrap" ng-click="getHosts(location)" href="#/{{type}}/{{location}}">
         <h2>{{location}}</h2>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>

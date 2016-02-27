@@ -1,7 +1,15 @@
 <div>
+	<label class="item-input">
+		<span class="input-label">E-mail</span>
+		<b>{{ host.email }}</b>
+	</label>
 	<p>
 		Update your account information.
 	</p>
+	<label class="item item-input">
+		<span class="input-label">New Password</span>
+		<input type="password" ng-model="host.newPassword">
+	</label>
 	<label class="item item-input">
 		<span class="input-label">First Name</span>
 		<input type="text" ng-model="host.firstName">
@@ -13,14 +21,6 @@
 	<label class="item item-input">
 		<span class="input-label">Phone Number</span>
 		<input type="tel" ng-model="host.mobile">
-	</label>
-	<label class="item item-input">
-		<span class="input-label">E-mail</span>
-		<input type="email" ng-model="host.email">
-	</label>
-	<label class="item item-input">
-		<span class="input-label">New Password</span>
-		<input type="password" ng-model="host.newPassword">
 	</label>
 	<label class="item item-input">
 		<span class="input-label">Night Club</span>

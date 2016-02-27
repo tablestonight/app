@@ -1,7 +1,7 @@
 (function() {
 	angular
 		.module('app.home.host', [])
-		.factory('HostService', function($http, $q, TablesTonightService) {
+		.factory('HostService', function($http, TablesTonightService) {
 
 			var svc                   = {};
 
@@ -15,7 +15,7 @@
 			return svc;
 
 			function login(credentials) {
-				return $http.post('http://tablestonight.herokuapp.com/host/login', credentials)
+				return $http.post('http://localhost:1337/host/login', credentials)
 					.then(function(response) {
 						if (!response.data.error) {
 							hostInfo = response.data;
@@ -29,7 +29,7 @@
 			}
 
 			function updateHostInformation() {
-				return $http.post('http://tablestonight.herokuapp.com/host/update', hostInfo)
+				return $http.post('http://localhost:1337/host/update', hostInfo)
 					.then(function(response) {
 						if (!response.data.error) {
 							hostInfo = response.data;

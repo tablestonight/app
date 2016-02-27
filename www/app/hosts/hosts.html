@@ -5,10 +5,11 @@
         class="item-remove-animate item-avatar item-icon-right"
         ng-repeat="host in hosts"
         type="item-text-wrap"
-        href="#/host/{{host.id}}">
+        ng-click="saveHost($index)"
+        href="#/host">
 
         <img ng-src="{{host.face}}">
-        <h2>{{host.name}}</h2>
+        <h2>{{host.firstName}} {{host.lastName}}</h2>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
       </ion-item>

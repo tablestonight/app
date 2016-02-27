@@ -4,9 +4,8 @@
 		.controller('HostDetailCtrl', HostDetailCtrl);
 
 	function HostDetailCtrl($scope, HostsService, $stateParams) {
-		$scope.host = HostsService.get($stateParams.hostId);
-	  $scope.$on("$ionicView.enter", function() {
-	    $scope.$emit('hide');
+	  $scope.$on("$ionicView.beforeEnter", function() {
+	    $scope.host = HostsService.getHost();
 	  });
 	}
 })();

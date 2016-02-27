@@ -3,9 +3,19 @@
   </ion-nav-title>
   <ion-content class="padding">
     <div class="center">
-      <h3>{{host.name}}</h3>
+      <h3>{{host.firstName}} {{ host.lastName}}</h3>
       <img ng-src="{{host.face}}" class="host-image">
       <h4>Contact Information</h4>
-      <p>{{host.phoneNumber}}</p>
+      <ul>
+        <li>{{host.nickName}}</li>
+        <li>{{host.mobile}}</li>
+        <li>{{host.email}}</li>
+        <li>{{host.dayClub}}</li>
+        <li>{{host.nightClub}}</li>
+        <li>{{host.description}}</li>
+        <li>{{host.socialMedia.facebook}}</li>
+        <li>{{host.socialMedia.instagram}}</li>
+        <li>{{host.socialMedia.twitter}}</li>
+      </ul>
   </ion-content>
 </ion-view>
