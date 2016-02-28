@@ -6,6 +6,7 @@
 			var svc                   = {};
 
 			var hostInfo              = null;
+			svc.create                = create;
 			svc.login                 = login;
 			svc.getHostInfo           = getHostInfo;
 			svc.updateHostInformation = updateHostInformation
@@ -13,6 +14,10 @@
 			svc.nightClubList         = TablesTonightService.nightClubList;
 
 			return svc;
+
+			function create(newUser) {
+				return $http.post(TablesTonightService.getUrl() + 'host/create', newUser);
+			}
 
 			function login(credentials) {
 				return $http.post(TablesTonightService.getUrl() + 'host/login', credentials)

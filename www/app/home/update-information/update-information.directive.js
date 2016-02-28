@@ -17,9 +17,14 @@
 			///////////////////////////////////////////////////////////////////////////
 
 			function link(scope, element, attrs) {
-				scope.step = 'step1';
-				scope.next = next;
+				scope.create = create;
+				scope.next   = next;
 				scope.finish = finish;
+
+				function create(newUser) {
+					HostService.create(newUser);
+					scope.close();
+				}
 
 				function next() {
 					scope.step = 'step2';

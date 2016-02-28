@@ -3,7 +3,7 @@
 		.module('tablesTonight.home.controller', [])
 		.controller('HomeCtrl', HomeCtrl);
 
-	function HomeCtrl($scope, $ionicModal, $state, HostService, TablesTonightService) {
+	function HomeCtrl($scope, $ionicModal, $state, $timeout, HostService, TablesTonightService) {
 
 		$scope.credentials       = {};
 		$scope.updateInformation = false;
@@ -11,9 +11,14 @@
 		$scope.navigate          = navigate;
 		$scope.openModal         = openModal;
 		$scope.closeModal        = closeModal;
+		$scope.signUp            = signUp;
 		init();
 
 		///////////////////////////////////////////////////////////////////////////
+
+		function signUp() {
+			$scope.updateInformation = 'step0';
+		}
 
 		function login() {
 			HostService.login($scope.credentials)
@@ -35,6 +40,13 @@
 	  }
 
 		function closeModal() {
+			if ($scope.updateInformation === 'step0') {
+				$scope.message = "Thanks for signing up. You'll be receiving an e-mail with next steps shortly.";
+				$timeout(function() {
+					delete $scope.message;
+				}, 5000);
+				return $scope.updateInformation = false;
+			}
 			if (HostService.getHostInfo()) {
 				$scope.updateInformation = 'step1';
 			}
@@ -44,7 +56,7 @@
 	  }
 
 		function init() {
-			$ionicModal.fromTemplateUrl('app/home/my-modal.html', {
+			$ionicModal.fromTemplateUrl('app/home/host-information.html', {
 		    scope: $scope,
 		    animation: 'slide-in-up'
 		  }).then(function(modal) {
@@ -56,14 +68,6 @@
 			function configureListeners() {
 				$scope.$on('$destroy', function() {
 			    $scope.modal.remove();
-			  });
-			  // Execute action on hide modal
-			  $scope.$on('modal.hidden', function() {
-			    // Execute action
-			  });
-			  // Execute action on remove modal
-			  $scope.$on('modal.removed', function() {
-			    // Execute action
 			  });
 			}
 		}
