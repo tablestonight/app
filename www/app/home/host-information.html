@@ -10,7 +10,7 @@
         <p class="center" ng-if="message">
           {{ message }}
         </p>
-        <form name="login" novalidate>
+        <form name="loginHost" novalidate>
     			<label class="item item-input">
     	      <span class="input-label">E-mail</span>
     	      <input type="email" ng-model="credentials.email" required>
@@ -19,7 +19,7 @@
     	      <span class="input-label">Password</span>
     	      <input type="password" ng-model="credentials.password" required>
     	    </label>
-    	    <button ng-disabled="login.$invalid" ng-click="login()" class="button button-block button-dark">
+    	    <button ng-disabled="loginHost.$invalid" ng-click="login()" class="button button-block button-dark">
     	      Login
     	    </button>
         </form>
