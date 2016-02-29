@@ -22,8 +22,10 @@
 				scope.finish = finish;
 
 				function create(newUser) {
-					HostService.create(newUser);
-					scope.close();
+					HostService.create(newUser)
+						.then(function(host) {
+							scope.close();
+						});
 				}
 
 				function next() {

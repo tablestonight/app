@@ -1,13 +1,18 @@
 <div>
-	<label class="item item-input">
-		<span class="input-label">E-mail</span>
-		<input type="email" ng-model="newEntry.email">
-	</label>
-	<label class="item item-input">
-		<span class="input-label">Password</span>
-		<input type="password" ng-model="newEntry.password">
-	</label>
-	<button ng-click="submitEmail()" class="button button-block button-balanced">
-		Create an account
-	</button>
+	<form name='newHost' novalidate>
+		<p class="center">
+			In order to be a host, you'll need to create an account:
+		</p>
+		<label class="item item-input">
+			<span class="input-label">E-mail</span>
+			<input type="email" ng-model="newEntry.email" required>
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Password</span>
+			<input type="password" ng-model="newEntry.password" required>
+		</label>
+		<button ng-disabled="newHost.$invalid"ng-click="submitEmail()" class="button button-block button-balanced">
+			Create an account
+		</button>
+	</form>
 </div>

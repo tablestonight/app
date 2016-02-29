@@ -23,9 +23,10 @@
 		function login() {
 			HostService.login($scope.credentials)
 				.then(function(host) {
-					if (!host.error) {
-						$scope.updateInformation = 'step1';
+					if (host.error) {
+						return $scope.message = host.error;
 					}
+					$scope.updateInformation = 'step1';
 				});
 			// closeModal();
 		}
@@ -39,15 +40,20 @@
 			$scope.modal.show();
 	  }
 
-		function closeModal() {
-			if ($scope.updateInformation === 'step0') {
-				$scope.message = "Thanks for signing up. You'll be receiving an e-mail with next steps shortly.";
-				$timeout(function() {
-					delete $scope.message;
-				}, 5000);
-				return $scope.updateInformation = false;
+		function closeModal(exitEarly) {
+			if ($scope.updateInformation === 'step0' && !exitEarly) {
+				// $scope.message = "Thanks for signing up. You'll be receiving an e-mail with next steps shortly.";
+				// $timeout(function() {
+				// 	delete $scope.message;
+				// }, 5000);
+				// return $scope.updateInformation = false;
+
 			}
 			if (HostService.getHostInfo()) {
+				if ($scope.updateInformation === 'step0') {
+					$scope.updateInformation = 'step1';
+					return;
+				}
 				$scope.updateInformation = 'step1';
 			}
 	    $scope.modal.remove();
@@ -68,6 +74,14 @@
 			function configureListeners() {
 				$scope.$on('$destroy', function() {
 			    $scope.modal.remove();
+			  });
+
+				$scope.$on('modal.removed', function() {
+					if ($scope.updateInformation !== 'step1') {
+						$timeout(function() {
+							$scope.updateInformation = false;
+						}, 500);
+					}
 			  });
 			}
 		}
