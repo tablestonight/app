@@ -19,9 +19,9 @@
 				return $http.post(TablesTonightService.getUrl() + 'host/create', newUser)
 					.then(function(response) {
 						if (!response.data.error) {
-							hostInfo = response.data;
+							return true;
 						}
-						return response.data;
+						return false;
 					});
 			}
 

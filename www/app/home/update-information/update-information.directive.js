@@ -23,7 +23,7 @@
 
 				function create(newUser) {
 					HostService.create(newUser)
-						.then(function(host) {
+						.then(function(hostCreated) {
 							scope.close();
 						});
 				}

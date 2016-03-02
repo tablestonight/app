@@ -42,18 +42,13 @@
 
 		function closeModal(exitEarly) {
 			if ($scope.updateInformation === 'step0' && !exitEarly) {
-				// $scope.message = "Thanks for signing up. You'll be receiving an e-mail with next steps shortly.";
-				// $timeout(function() {
-				// 	delete $scope.message;
-				// }, 5000);
-				// return $scope.updateInformation = false;
-
+				$scope.message = "Thanks for signing up. You'll be receiving an e-mail with next steps shortly.";
+				$timeout(function() {
+					delete $scope.message;
+				}, 5000);
+				return $scope.updateInformation = false;
 			}
 			if (HostService.getHostInfo()) {
-				if ($scope.updateInformation === 'step0') {
-					$scope.updateInformation = 'step1';
-					return;
-				}
 				$scope.updateInformation = 'step1';
 			}
 	    $scope.modal.remove();
