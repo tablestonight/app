@@ -1,5 +1,5 @@
 <ion-modal-view>
-    <ion-header-bar class="bar-positive">
+    <ion-header-bar class="bar-calm">
       <h1 class="title">Be a Host today!</h1>
       <div class="buttons">
         <button ng-click="closeModal(true)" class="button icon ion-close"></button>
@@ -7,6 +7,9 @@
     </ion-header-bar>
     <ion-content class="padding">
       <div ng-if="!updateInformation">
+        <p class="center">
+          <img ng-src="img/new_user.png" />
+        </p>
         <p class="center" ng-if="message">
           {{ message }}
         </p>
@@ -19,12 +22,13 @@
     	      <span class="input-label">Password</span>
     	      <input type="password" ng-model="credentials.password" required>
     	    </label>
-    	    <button ng-disabled="loginHost.$invalid" ng-click="login()" class="button button-block button-dark">
+    	    <button ng-disabled="loginHost.$invalid" ng-click="login()" class="button button-block button-calm">
     	      Login
     	    </button>
         </form>
         <p class="center">
           or
+          <br />
           <br />
           <button ng-click="signUp()" class="button button-balanced">
             Sign-Up

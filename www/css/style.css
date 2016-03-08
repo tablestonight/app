@@ -7,3 +7,36 @@
 	width: 128px;
 	height: 128px;
 }
+
+.pane, .bar-footer, .scroll-content {
+	background-color: #000000;
+}
+
+.home {
+	color: #40C4FF;
+}
+
+.fixed {
+	position: absolute;
+}
+
+.space {
+	height: 50%;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+.item-input {
+	background-color: #000000;
+}
+
+.input-label, p, b, span, li, h4, h3, .bar.bar-stable .title {
+	color: #FFFFFF;
+}
+
+#description {
+	word-break: break-word;
+}

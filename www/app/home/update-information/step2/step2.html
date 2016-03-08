@@ -2,32 +2,46 @@
 	<p>
 		Let's set up your account.
 	</p>
-	<label class="item item-input">
-		<span class="input-label">Nickname</span>
-		<input type="text" ng-model="host.nickName">
-	</label>
-	<label class="item item-input">
-		<span class="input-label">Day Club</span>
-		<select ng-options="dayclub for dayclub in dayClubList"
-			ng-model="host.dayClub">
-		</select>
-	</label>
-	<label class="item item-input">
-		<span class="input-label">Facebook</span>
-		/<input type="text" ng-model="host.socialMedia.facebook">
-	</label>
-	<label class="item item-input">
-		<span class="input-label">Instagram</span>
-		@<input type="text" ng-model="host.socialMedia.instagram">
-	</label>
-	<label class="item item-input">
-		<span class="input-label">Twitter</span>
-		@<input type="text" ng-model="host.socialMedia.twitter">
-	</label>
-	<button ng-click="finish()" class="button button-block button-assertive">
-		Skip
-	</button>
-	<button ng-click="finish()" class="button button-block button-positive">
-		Save
-	</button>
+	<form name="updateInfo">
+		<label class="item item-input">
+			<span class="input-label">Nickname</span>
+			<input type="text" ng-model="host.nickName">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Day Club</span>
+			<select ng-options="dayclub for dayclub in dayClubList"
+				ng-model="host.dayClub">
+			</select>
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Facebook</span>
+			<b>/</b><input type="text" ng-model="host.socialMedia.facebook">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Instagram</span>
+			<b>@</b><input type="text" ng-model="host.socialMedia.instagram">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Twitter</span>
+			<b>@</b><input type="text" ng-model="host.socialMedia.twitter">
+		</label>
+		<div class="list">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">
+					What sets you apart from other hosts?
+				</span>
+				<br />
+				<input id="description" type="text" name="description" ng-model="host.description" ng-maxlength="140">
+				<div ng-if="updateInfo.description.$invalid">
+					Must be below 140 characters
+				</div>
+				<div ng-if="updateInfo.description.$valid">
+					{{ 140 - host.description.length }} characters left
+				</div>
+			</label>
+		</div>
+		<button ng-disabled="updateInfo.$invalid" ng-click="finish()" class="button button-block button-calm">
+			Save
+		</button>
+	</form>
 </div>

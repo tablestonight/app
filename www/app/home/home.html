@@ -2,20 +2,37 @@
   <ion-nav-title hidden='true'>
   </ion-nav-title>
   <ion-content class="padding">
-    <h2>Tables Tonight</h2>
-    <p>
-      Bruh.
+    <h2 class="home">Connect.Vegas</h2>
+    <div class="center">
+      <img src="img/logo.png" />
+    </div>
+    <p class="home">
+      Let us take care of your clubbing experience.
     </p>
+    <p class="home">
+      We route you to the best hosts in the business.
+    </p>
+    <div class="row row-center">
+      <div class="col">
+        <br />
+      </div>
+    </div>
 
-    <button ng-click="navigate('day')" class="button button-block button-stable">
-      Dayclubs
-    </button>
-
-    <button ng-click="navigate('night')" class="button button-block button-dark">
-      NightClubs
-    </button>
-
-    <button ng-click="openModal()" class="ion-gear-b button icon"></button>
+    <div>
+      <p class="center">
+        <button ng-click="navigate('day')" class="button button-light">
+          Dayclubs
+        </button>
+        <br />
+        <br />
+        <button ng-click="navigate('night')" class="button button-dark">
+          NightClubs
+        </button>
+      </p>
+    </div>
 
   </ion-content>
 </ion-view>
+<div class="bar bar-footer bar-clear">
+  <button ng-click="openModal()" class="ion-gear-b button button-clear icon pull-right"></button>
+</div>
