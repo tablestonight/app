@@ -2,8 +2,9 @@
   <ion-nav-title>{{ title }}</ion-nav-title>
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="location in locations" type="item-text-wrap" ng-click="getHosts(location)" href="#/{{type}}/{{location}}">
-        <h2>{{location}}</h2>
+      <ion-item class="item-remove-animate location item-icon-right" ng-repeat="location in locations" type="item-text-wrap" ng-click="getHosts(location)" href="#/{{type}}/{{location}}">
+        <h1>{{location}}</h1>
+        <img src="img/azure.png" />
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>

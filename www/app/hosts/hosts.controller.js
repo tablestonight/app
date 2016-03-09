@@ -5,9 +5,9 @@
 
 	function HostsCtrl($scope, $stateParams, HostsService) {
 	  $scope.$on("$ionicView.beforeEnter", function(HostDetailCtrl) {
-			var name = $stateParams.name;
+			$scope.name = $stateParams.name;
 			var type = $stateParams.type;
-			getHosts(name)
+			getHosts($scope.name)
 				.then(function(hosts) {
 					$scope.hosts = hosts;
 				});
