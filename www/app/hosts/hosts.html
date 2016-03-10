@@ -6,14 +6,18 @@
     </p>
     <ion-list>
       <ion-item
-        class="item-remove-animate item-avatar item-icon-right"
+        class="item item-thumbnail-right item-icon-right host"
         ng-repeat="host in hosts"
         type="item-text-wrap"
         ng-click="saveHost($index)"
         href="#/host">
 
-        <img ng-src="{{host.face}}">
-        <h2>{{host.firstName}} {{host.lastName}}</h2>
+        <img src="img/adam.jpg" />
+        <br />
+        <div class="host-name">
+          <h2>{{host.firstName}}</h2>
+          <h2>{{host.lastName}}</h2>
+        </div>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
       </ion-item>
