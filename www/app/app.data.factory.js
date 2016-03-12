@@ -44,17 +44,16 @@
 				'Azure',
 				'Bare',
 				'Daylight',
-				'Delano Beach Club',
 				'Drais Beach Club',
 				'Encore Beach Club',
-				'Foxtail Beach Club',
+				'Foxtail Pool Club',
 				'Lavo Brunch',
 				'Liquid Pool',
 				'Marquee Day Club',
-				'Moorea',
-				'Palms Pool Day Club',
+				'Moorea Beach Club',
+				'Ditch Fridays',
 				'Rehab Beach Club',
-				'TAO Beach Club',
+				'TAO Beach',
 				'Wet Republic'
 			]
 		}
@@ -63,8 +62,7 @@
 
 			return [
 				'1OAK',
-				'Chateau',
-				'Embassy',
+				'Drais',
 				'Foundation Room',
 				'Foxtail',
 				'Hakkasan',

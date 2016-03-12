@@ -2,7 +2,16 @@
   <ion-content>
     <h3 class="padding"> {{ name }} </h3>
     <p class="padding">
-      Set apart from the crowds, Azure offers an atmosphere of exclusivity for those who seek refined experiences. Worship the sun on one of 15 daybeds and 26 lounge chairs with optional umbrellas, then go for a refreshing dip in your choice of two swimming pools or soak your cares away in the jetted hot tub.
+      <span>
+        Hours: {{ info.hours }}
+      </span>
+      <br />
+      <span>
+        Location: {{ info.location }}
+      </span>
+    </p>
+    <p class="padding">
+      {{ info.description }}
     </p>
     <ion-list>
       <ion-item
