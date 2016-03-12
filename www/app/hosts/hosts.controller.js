@@ -8,8 +8,10 @@
 			$scope.name = $stateParams.name;
 			var type = $stateParams.type;
 			getHosts($scope.name)
-				.then(function(hosts) {
-					$scope.hosts = hosts;
+				.then(function(clubInfo) {
+					console.log(clubInfo);
+					$scope.info = clubInfo.info;
+					$scope.hosts = clubInfo.hosts;
 				});
 	  });
 

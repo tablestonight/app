@@ -63,8 +63,7 @@
 
 			return [
 				'1OAK',
-				'Chateau',
-				'Embassy',
+				'Drais',
 				'Foundation Room',
 				'Foxtail',
 				'Hakkasan',
