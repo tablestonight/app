@@ -105,10 +105,10 @@
 					fileName: 'hakkasan'
 				},
 				{ name: 'Hyde',
-					fileName: '1oak'
+					fileName: 'hyde'
 				},
 				{ name: 'Lavo',
-					fileName: '1oak'
+					fileName: 'lavo'
 				},
 				{ name: 'LAX',
 					fileName: '1oak'
