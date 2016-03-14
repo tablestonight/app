@@ -9,7 +9,7 @@
 		</label>
 		<label class="item item-input">
 			<span class="input-label">Day Club</span>
-			<select ng-options="dayclub for dayclub in dayClubList"
+			<select ng-options="dayclub.name as dayclub.name for dayclub in dayClubList"
 				ng-model="host.dayClub">
 			</select>
 		</label>
