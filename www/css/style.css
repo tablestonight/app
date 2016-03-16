@@ -39,6 +39,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 
 .locations {
 	border: none;
+	height: 120px;
 }
 
 .host-name {
@@ -63,13 +64,16 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 
 .location-image {
 	width: inherit;
-	height: inherit;
 	z-index: -1;
+	position: fixed;
 }
 
 h1 {
-	margin-top: 0;
+	font-weight: bold;
+	position: absolute;
 	margin-left: 5px;
+	bottom: 10px;
+	left: 10px;
 }
 
 .item-thumbnail-right > img:first-child, .item-thumbnail-right .item-image, .item-thumbnail-right .item-content > img:first-child, .item-thumbnail-right .item-content .item-image {
