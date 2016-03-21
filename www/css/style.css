@@ -33,7 +33,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	background-color: #000000;
 }
 
-.input-label, p, b, span, li, h4, h3, h1, h2, .bar.bar-stable .title {
+.input-label, p, b, span, li, h4, h3, h1, h2, .bar.bar-stable .title, table {
 	color: #FFFFFF;
 }
 
@@ -76,10 +76,21 @@ h1 {
 	left: 10px;
 }
 
+table, .secondary {
+	width: 100%;
+}
+
+.table-label {
+	text-align: right;
+	color: #40c4ff;
+	font-weight: bold;
+}
+
 .item-thumbnail-right > img:first-child, .item-thumbnail-right .item-image, .item-thumbnail-right .item-content > img:first-child, .item-thumbnail-right .item-content .item-image {
 	right: 60px;
 }
 
 #description {
 	word-break: break-word;
+	height: 50px;
 }

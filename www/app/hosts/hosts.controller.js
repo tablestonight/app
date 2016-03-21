@@ -10,7 +10,6 @@
 			var type = $stateParams.type;
 			getHosts($scope.name)
 				.then(function(clubInfo) {
-					console.log("finished");
 					$scope.loading = false;
 					$scope.info = clubInfo.info;
 					$scope.hosts = clubInfo.hosts;

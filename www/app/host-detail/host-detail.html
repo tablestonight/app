@@ -4,18 +4,41 @@
   <ion-content class="padding">
     <div class="center">
       <h3>{{host.firstName}} {{ host.lastName}}</h3>
+      <h4 ng-if="host.nickName">( {{ host.nickName }} )</h4>
       <img ng-src="img/new_user.png" class="host-image">
+      <p>
+        {{host.description}}
+      </p>
       <h4>Contact Information</h4>
-      <ul>
-        <li>{{host.nickName}}</li>
-        <li>{{host.mobile}}</li>
-        <li>{{host.email}}</li>
-        <li>{{host.dayClub}}</li>
-        <li>{{host.nightClub}}</li>
-        <li>{{host.description}}</li>
-        <li>{{host.socialMedia.facebook}}</li>
-        <li>{{host.socialMedia.instagram}}</li>
-        <li>{{host.socialMedia.twitter}}</li>
-      </ul>
+      <table>
+        <tr>
+          <td class="table-label">Mobile: </td>
+          <td>{{host.mobile}}</td>
+        </tr>
+        <tr>
+          <td class="table-label">E-mail: </td>
+          <td>{{host.email}}</td>
+        </tr>
+        <tr>
+          <td class="table-label">Dayclub: </td>
+          <td>{{host.dayClub}}</td>
+        </tr>
+        <tr>
+          <td class="table-label">Nightclub: </td>
+          <td>{{host.nightClub}}</td>
+        </tr>
+        <tr>
+          <td class="table-label">Facebook: </td>
+          <td>{{host.socialMedia.facebook}}</td>
+        </tr>
+        <tr>
+          <td class="table-label">Instagram: </td>
+          <td>{{host.socialMedia.instagram}}</td>
+        </tr>
+        <tr>
+          <td class="table-label">Twitter: </td>
+          <td>{{host.socialMedia.twitter}}</td>
+        </tr>
+      </table>
   </ion-content>
 </ion-view>
