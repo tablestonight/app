@@ -41,102 +41,42 @@
 
 		function dayClubList() {
 			return [
-				{ name: 'Azure',
-					fileName: '1oak'
-				},
-				{ name: 'Bare',
-					fileName: '1oak'
-				},
-				{ name: 'Daylight',
-					fileName: '1oak'
-				},
-				{ name: 'Drais Beach Club',
-					fileName: '1oak'
-				},
-				{ name: 'Encore Beach Club',
-					fileName: '1oak'
-				},
-				{ name: 'Foxtail Pool Club',
-					fileName: '1oak'
-				},
-				{ name: 'Lavo Brunch',
-					fileName: '1oak'
-				},
-				{ name: 'Liquid Pool',
-					fileName: '1oak'
-				},
-				{ name: 'Marquee Day Club',
-					fileName: '1oak'
-				},
-				{ name: 'Moorea Beach Club',
-					fileName: '1oak'
-				},
-				{ name: 'Ditch Fridays',
-					fileName: '1oak'
-				},
-				{ name: 'Rehab Beach Club',
-					fileName: '1oak'
-				},
-				{ name: 'TAO Beach',
-					fileName: '1oak'
-				},
-				{ name: 'Wet Republic',
-					fileName: '1oak'
-				}
-			];
+				'Azure',
+ 				'Bare',
+ 				'Daylight',
+ 				'Drais Beach Club',
+ 				'Encore Beach Club',
+ 				'Foxtail Pool Club',
+ 				'Lavo Brunch',
+ 				'Liquid Pool',
+ 				'Marquee Day Club',
+ 				'Moorea Beach Club',
+ 				'Ditch Fridays',
+ 				'Rehab Beach Club',
+ 				'TAO Beach',
+ 				'Wet Republic'
+ 			]
 		}
 
 		function nightClubList() {
 
 			return [
-				{ name: '1OAK',
-					fileName: '1oak'
-				},
-				{ name: 'Drais',
-					fileName: 'drais'
-				},
-				{ name: 'Foundation Room',
-					fileName: 'foundation'
-				},
-				{ name: 'Foxtail',
-					fileName: 'foxtail'
-				},
-				{ name: 'Hakkasan',
-					fileName: 'hakkasan'
-				},
-				{ name: 'Hyde',
-					fileName: 'hyde'
-				},
-				{ name: 'Lavo',
-					fileName: 'lavo'
-				},
-				{ name: 'LAX',
-					fileName: 'lax'
-				},
-				{ name: 'Light',
-					fileName: 'light'
-				},
-				{ name: 'Marquee',
-					fileName: 'marquee'
-				},
-				{ name: 'Omnia',
-					fileName: 'omnia'
-				},
-				{ name: 'Sayers Club',
-					fileName: 'sayers'
-				},
-				{ name: 'Surrender',
-					fileName: 'surrender'
-				},
-				{ name: 'Tao',
-					fileName: 'tao'
-				},
-				{ name: 'The Bank',
-					fileName: 'bank'
-				},
-				{ name: 'XS',
-					fileName: 'xs'
-				}
+				'1OAK',
+ 				'Drais',
+ 				'Foundation Room',
+ 				'Foxtail',
+ 				'Hakkasan',
+ 				'Hyde',
+ 				'Lavo',
+ 				'LAX',
+ 				'Light',
+ 				'Marquee',
+ 				'Omnia',
+ 				'Sayers Club',
+ 				'Surrender',
+ 				'Tao',
+ 				'The Bank',
+ 				'XS'
 			];
 		}
 	}
