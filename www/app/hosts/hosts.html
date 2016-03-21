@@ -1,35 +1,39 @@
 <ion-view view-title="Available Hosts">
   <ion-content>
-    <h3 class="padding"> {{ name }} </h3>
-    <p class="padding">
-      <span>
-        Hours: {{ info.hours }}
-      </span>
-      <br />
-      <span>
-        Location: {{ info.location }}
-      </span>
-    </p>
-    <p class="padding">
-      {{ info.description }}
-    </p>
-    <ion-list>
-      <ion-item
-        class="item item-thumbnail-right item-icon-right host"
-        ng-repeat="host in hosts"
-        type="item-text-wrap"
-        ng-click="saveHost($index)"
-        href="#/host">
-
-        <img src="img/new_user.png" />
+    <div ng-if="loading" class="center">
+      <img src="img/hourglass.gif" />
+    </div>
+    <div ng-if="!loading">
+      <h3 class="padding"> {{ name }} </h3>
+      <p class="padding">
+        <span>
+          Hours: {{ info.hours }}
+        </span>
         <br />
-        <div class="host-name">
-          <h2>{{host.firstName}}</h2>
-          <h2>{{host.lastName}}</h2>
-        </div>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        <span>
+          Location: {{ info.location }}
+        </span>
+      </p>
+      <p class="padding">
+        {{ info.description }}
+      </p>
+      <ion-list>
+        <ion-item
+          class="item item-thumbnail-right item-icon-right host"
+          ng-repeat="host in hosts"
+          type="item-text-wrap"
+          ng-click="saveHost($index)"
+          href="#/host">
 
-      </ion-item>
-    </ion-list>
+          <img src="img/new_user.png" />
+          <br />
+          <div class="host-name">
+            <h2>{{host.firstName}}</h2>
+            <h2>{{host.lastName}}</h2>
+          </div>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+      </ion-list>
+    </div>
   </ion-content>
 </ion-view>

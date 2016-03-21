@@ -111,31 +111,31 @@
 					fileName: 'lavo'
 				},
 				{ name: 'LAX',
-					fileName: '1oak'
+					fileName: 'lax'
 				},
 				{ name: 'Light',
-					fileName: '1oak'
+					fileName: 'light'
 				},
 				{ name: 'Marquee',
-					fileName: '1oak'
+					fileName: 'marquee'
 				},
 				{ name: 'Omnia',
-					fileName: '1oak'
+					fileName: 'omnia'
 				},
 				{ name: 'Sayers Club',
 					fileName: 'sayers'
 				},
 				{ name: 'Surrender',
-					fileName: '1oak'
+					fileName: 'surrender'
 				},
 				{ name: 'Tao',
-					fileName: '1oak'
+					fileName: 'tao'
 				},
 				{ name: 'The Bank',
-					fileName: '1oak'
+					fileName: 'bank'
 				},
 				{ name: 'XS',
-					fileName: '1oak'
+					fileName: 'xs'
 				}
 			];
 		}
