@@ -17,6 +17,10 @@
         <span>
           Location: {{ info.location }}
         </span>
+        <br ng-if="info.djs"/>
+        <span ng-if="info.djs">
+          Home of: {{ info.djs }}
+        </span>
       </p>
       <p class="padding">
         {{ info.description }}
