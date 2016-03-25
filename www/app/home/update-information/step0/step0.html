@@ -3,15 +3,23 @@
 		<p class="center">
 			In order to be a host, you'll need to create an account:
 		</p>
-		<label class="item item-input">
-			<span class="input-label">E-mail</span>
-			<input type="email" ng-model="newEntry.email" required>
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Password</span>
-			<input type="password" ng-model="newEntry.password" required>
-		</label>
-		<button ng-disabled="newHost.$invalid"ng-click="submitEmail()" class="button button-block button-balanced">
+		<div ng-if="!loading">
+			<label class="item item-input">
+				<span class="input-label">E-mail</span>
+				<input type="email" ng-model="newEntry.email" required>
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Password</span>
+				<input type="password" ng-model="newEntry.password" required>
+			</label>
+		</div>
+		<div ng-if="loading" class="center">
+      <img src="img/hourglass.gif" />
+      <p>
+        Creating account...
+      </p>
+    </div>
+		<button ng-disabled="newHost.$invalid || loading" ng-click="submitEmail()" class="button button-block button-balanced">
 			Create an account
 		</button>
 	</form>

@@ -19,6 +19,13 @@
 			function link(scope, element, attrs) {
 				scope.host = HostService.getHostInfo();
 				scope.dayClubList = HostService.dayClubList;
+
+				scope.completeUpdate = completeUpdate;
+
+				function completeUpdate() {
+					scope.loading = true;
+					scope.finish();
+				}
 			}
 
 		});

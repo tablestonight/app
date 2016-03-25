@@ -21,8 +21,11 @@
 		}
 
 		function login() {
+			$scope.message = '';
+			$scope.loading = true;
 			HostService.login($scope.credentials)
 				.then(function(host) {
+					$scope.loading = false;
 					if (host.error) {
 						return $scope.message = host.error;
 					}

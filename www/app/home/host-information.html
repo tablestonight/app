@@ -14,15 +14,23 @@
           {{ message }}
         </p>
         <form name="loginHost" novalidate>
-    			<label class="item item-input">
-    	      <span class="input-label">E-mail</span>
-    	      <input type="email" ng-model="credentials.email" required>
-    	    </label>
-    	    <label class="item item-input">
-    	      <span class="input-label">Password</span>
-    	      <input type="password" ng-model="credentials.password" required>
-    	    </label>
-    	    <button ng-disabled="loginHost.$invalid" ng-click="login()" class="button button-block button-calm">
+          <div ng-if="loading" class="center">
+            <img src="img/hourglass.gif" />
+            <p>
+              Creating account...
+            </p>
+          </div>
+          <div ng-if="!loading">
+          	<label class="item item-input">
+      	      <span class="input-label">E-mail</span>
+      	      <input type="email" ng-model="credentials.email" required>
+      	    </label>
+      	    <label class="item item-input">
+      	      <span class="input-label">Password</span>
+      	      <input type="password" ng-model="credentials.password" required>
+      	    </label>
+          </div>
+    	    <button ng-disabled="loginHost.$invalid || loading" ng-click="login()" class="button button-block button-calm">
     	      Login
     	    </button>
         </form>

@@ -21,6 +21,7 @@
 				scope.submitEmail = submitEmail;
 
 				function submitEmail() {
+					scope.loading = true;
 					scope.create(scope.newEntry);
 					delete scope.newEntry;
 				}
