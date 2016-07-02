@@ -13,7 +13,11 @@
       <table>
         <tr>
           <td class="table-label">Mobile: </td>
-          <td>{{host.mobile}}</td>
+          <td><a ng-href="tel:{{host.mobile}}"> {{ host.mobile }} </a></td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td><a ng-href="sms:{{ host.mobile }}&body={{ textMessageBody }}">Send a Text</a></td>
         </tr>
         <tr>
           <td class="table-label">E-mail: </td>
