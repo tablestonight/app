@@ -6,6 +6,19 @@
 	<p>
 		Update your account information.
 	</p>
+	<div class="list">
+    <a class="item item-thumbnail-left" href="#">
+      <img ng-if="host.photoInfo != ''" ng-src="{{ host.photoInfo }}">
+      <img ng-if="host.photoInfo == ''" src="img/new_user.png">
+			<button ng-click="startCamera()" class="button button-block button-balanced">
+				Update Photo
+			</button>
+    </a>
+	</div>
+	<label class="item item-input">
+		<span class="input-label">New Password</span>
+		<input type="password" ng-model="host.newPassword">
+	</label>
 	<label class="item item-input">
 		<span class="input-label">New Password</span>
 		<input type="password" ng-model="host.newPassword">

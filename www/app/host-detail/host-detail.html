@@ -5,7 +5,8 @@
     <div class="center">
       <h3>{{host.firstName}} {{ host.lastName}}</h3>
       <h4 ng-if="host.nickName">( {{ host.nickName }} )</h4>
-      <img ng-src="img/new_user.png" class="host-image">
+      <img ng-if="host.photoInfo != ''" ng-src="{{ host.photoInfo }}" class="host-image">
+      <img ng-if="host.photoInfo == ''" src="img/new_user.png" class="host-image">
       <p>
         {{host.description}}
       </p>

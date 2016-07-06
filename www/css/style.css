@@ -29,7 +29,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	background-color: #000000;
 }
 
-.item-input {
+.item-input, .item-thumbnail-left {
 	background-color: #000000;
 }
 

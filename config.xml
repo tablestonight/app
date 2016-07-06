@@ -18,6 +18,7 @@
   <preference name="SplashScreenDelay" value="3000"/>
   <allow-navigation href="sms:*" />
   <allow-navigation href="tel:*" />
+  <allow-navigation href="mailto:*" />
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>

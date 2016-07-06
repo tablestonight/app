@@ -5,5 +5,6 @@ angular
 		'tablesTonight.locations',
 		'tablesTonight.hosts',
 		'tablesTonight.host-detail',
-		'app.data'
+		'app.data',
+		'ngCordova'
 	]);

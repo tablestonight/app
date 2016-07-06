@@ -36,7 +36,8 @@
           ng-click="saveHost($index)"
           href="#/host">
 
-          <img src="img/new_user.png" />
+          <img ng-if="host.photoInfo != ''" ng-src="{{ host.photoInfo }}">
+          <img ng-if="host.photoInfo == ''" src="img/new_user.png">
           <br />
           <div class="host-name">
             <h2>{{host.firstName}}</h2>
